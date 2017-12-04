@@ -83,7 +83,7 @@ $(document).ready(function(){
     if (t) clearInterval(t);
     switch(this.id) { 
       case "next": next(); break;
-      case "shuffel": shuffle(); break;
+      case "shuffle": shuffle(); break;
       case "round": round();
     }
   });

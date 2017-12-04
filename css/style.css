@@ -1,0 +1,43 @@
+body {
+  background: url(https://srbberlin.surge.sh/sites/fcc-0003/atemwurzel.jpg)  no-repeat fixed center;
+  font-family: Luckiest Guy;
+  
+}
+
+.container {
+  background: transparent;
+}
+
+#BOX {
+  position: relative;
+  margin: auto;
+  background-color: rgba(90,0,80,0.8);
+  color: white;
+  border: solid white 3px;
+  height: 600px;
+  width: 60%;
+  padding: 3.5em;
+}
+
+#BTMS {
+  padding-bottom: 2.5em;
+}
+
+#author,#quote {
+  padding-top: 0.7em;
+  font-family: Special Elite;
+  font-size: 120%;
+}
+
+#author,#tweet,#footer {
+  text-align: right;
+  padding-top: 0.7em;
+}
+
+#ToBottom {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 60%;
+  padding: 3.5em;
+}

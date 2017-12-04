@@ -61,13 +61,13 @@ $(document).ready(function(){
 		});
   }
   
-  function shuffel() {
+  function shuffle() {
 	  getQuote().done(function(data) {
 		  setQuote(data);
       if(set >= depth)
         set = 0;
       q[set++] = data;
-      t = setTimeout(shuffel, 1000 + data.quote.length * 100);
+      t = setTimeout(shuffle, 1000 + data.quote.length * 100);
 	  });
   }
   
@@ -83,7 +83,7 @@ $(document).ready(function(){
     if (t) clearInterval(t);
     switch(this.id) { 
       case "next": next(); break;
-      case "shuffel": shuffel(); break;
+      case "shuffel": shuffle(); break;
       case "round": round();
     }
   });

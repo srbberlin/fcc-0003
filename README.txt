@@ -1,8 +1,7 @@
-A Pen created at CodePen.io. You can find this one at https://codepen.io/srbberlin/pen/xqoxOg.
+# fcc-0003
+FreeCodeCamp The Random Quotemachine
 
- FreeCodeCamp
+Packages:
 
-The Random Qouotemachine
-
-Used Bootstrap 4.0.0 and JQuery / Tether.
+Bootstrap 4.0.0 and JQuery version 3.1.1 / Tether version 1.4.0
 

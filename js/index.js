@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(() => {
   var depth = 0, step = 0, set = 0, q = [], t, btns = $('[data-toggle="tooltip"]');
     
   window.twttr = (function(d, s, id) {
@@ -15,9 +15,9 @@ $(document).ready(function(){
     };
 
     return t;
-  }(document, "script", "twitter-wjs"));
+  } (document, "script", "twitter-wjs"));
 
-	var getQuote = function() {
+	var getQuote = () => {
 		return $.ajax({
 			url: 'https://andruxnet-random-famous-quotes.p.mashape.com/',
 			headers: {
@@ -29,45 +29,45 @@ $(document).ready(function(){
 		})
 	};
 
-	var setQuote = function(data) {
-		$('#twitter').attr(
+	var setQuote = (data) => {
+		$('#tweet-quote').attr(
       'href', 
       "https://twitter.com/intent/tweet?text=" +
       encodeURIComponent(data.quote + "\r\n\r\n"+data.author));
-	  $('#quote').text(data.quote);
+	  $('#text').text(data.quote);
 		$('#author').text("- " + data.author);
 	};
   
   function load(border) {
-    var i = 0;
+    let i = 0
     while (i < border) {
-      getQuote().done(function(data){
-        q.push(data);
+      getQuote()
+      .done(data => {
+        q[set++] = data[0];
         if (depth === 0)
           setQuote(q[0]);
-        depth ++;
-      });
+        depth++;
+      })
       i++;
     }
-    set = border;
   }
   
   function next() {
-	  getQuote().done(function(data) {
-		  setQuote(data);
+	  getQuote().done(data => {
+		  setQuote(data[0]);
       if(set >= depth)
         set = 0;
-      q[set++] = data;
+      q[set++] = data[0];
 		});
   }
   
   function shuffle() {
-	  getQuote().done(function(data) {
-		  setQuote(data);
+	  getQuote().done(data => {
+		  setQuote(data[0]);
       if(set >= depth)
         set = 0;
-      q[set++] = data;
-      t = setTimeout(shuffle, 1000 + data.quote.length * 100);
+      q[set++] = data[0];
+      t = setTimeout(shuffle, 1000 + data[0].quote.length * 100);
 	  });
   }
   
@@ -79,10 +79,10 @@ $(document).ready(function(){
     step++;
   }
 
-  $("#next,#shuffle,#round").click(function(){
+  $("#new-quote,#shuffle,#round").click(function(){
     if (t) clearInterval(t);
     switch(this.id) { 
-      case "next": next(); break;
+      case "new-quote": next(); break;
       case "shuffle": shuffle(); break;
       case "round": round();
     }

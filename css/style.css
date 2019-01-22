@@ -8,7 +8,7 @@ body {
   background: transparent;
 }
 
-#BOX {
+#quote-box {
   position: relative;
   margin: auto;
   background-color: rgba(90,0,80,0.8);
@@ -23,7 +23,7 @@ body {
   padding-bottom: 2.5em;
 }
 
-#author,#quote {
+#author,#text {
   padding-top: 0.7em;
   font-family: Special Elite;
   font-size: 120%;

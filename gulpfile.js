@@ -11,7 +11,7 @@ var config = {
 }
 
 function reload () {
-  console.log('reload');
+  console.log('reload')
   browserSync.reload()
 }
 
@@ -26,7 +26,7 @@ function serve (cp) {
   gulp.watch(config.js, reload)
   gulp.watch(config.img, reload)
 
-  cp();
+  cp()
 }
 
 exports.default = serve
